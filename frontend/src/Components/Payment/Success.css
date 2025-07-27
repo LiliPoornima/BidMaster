@@ -2,7 +2,7 @@
     text-align: center;
     padding: 50px;
     font-family: Arial, sans-serif;
-    background-image: url("F:\Online_Auction_System\Online_Auction_system\frontend\public\BidImages\shipgold.jpg"); /* Example beach background */
+    background-image: url('../../assets/shipgold.jpg'); /* Example beach background */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
