@@ -1,0 +1,495 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.shipDash-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Hero Section */
+.shipDash-hero-section {
+  position: relative;
+  padding: 9rem 0 5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/020/655/708/non_2x/business-and-technology-of-logistics-transport-concept-double-exposure-of-businessman-using-tablet-control-delivery-network-distribution-import-export-on-world-map-background-future-transportation-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 0.8s ease-out;
+  
+}
+
+.shipDash-hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.6));
+  z-index: 1;
+}
+
+.shipDash-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.shipDash-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.8rem;
+}
+
+.shipDash-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Quick Actions */
+/* Quick Actions Section (Shipping Dashboard Style) */
+.shipDash-actions-section {
+  margin-bottom: 3.5rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background-image: url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.shipDash-actions-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.shipDash-actions-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.shipDash-section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.shipDash-section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #1e293b, #64748b);
+  border-radius: 4px;
+}
+
+.shipDash-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 3rem;
+}
+
+.shipDash-action-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  padding: 2rem 1.2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.shipDash-action-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shipDash-action-card::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.4), rgba(147, 197, 253, 0.4));
+  border-radius: 50%;
+  top: -70px;
+  right: -70px;
+  z-index: 0;
+  transition: transform 0.4s ease;
+}
+
+.shipDash-action-card:hover::after {
+  transform: scale(1.5);
+}
+
+.shipDash-action-icon-container {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #cbd5e1, #e2e8f0);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.shipDash-action-card:hover .shipDash-action-icon-container {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.shipDash-action-icon {
+  font-size: 24px;
+  color: #1e293b;
+  z-index: 2;
+}
+
+.shipDash-action-card h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 600;
+  z-index: 1;
+  position: relative;
+  margin: 0;
+}
+
+/* Add hover hint */
+.shipDash-action-card::before {
+  content: 'Click to navigate';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shipDash-action-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .shipDash-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .shipDash-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.shipDash-section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.8rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.shipDash-section-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #1e293b, #64748b);
+  border-radius: 4px;
+}
+
+/* Activity Section */
+.shipDash-activity-section {
+  margin-bottom: 3.5rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.shipDash-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.shipDash-view-all-btn {
+  background-color: transparent;
+  color: #1e293b;
+  border: 2px solid #1e293b;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.shipDash-view-all-btn:hover {
+  background-color: #1e293b;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.shipDash-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.shipDash-activity-item {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  animation: itemFadeIn 0.5s ease-out forwards;
+}
+
+.shipDash-activity-item:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.shipDash-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  z-index: 1;
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.shipDash-activity-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.shipDash-activity-item:hover .shipDash-activity-image {
+  transform: scale(1.05);
+}
+
+.shipDash-activity-details {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.shipDash-activity-details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #1e293b;
+}
+
+.shipDash-activity-details p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.shipDash-activity-details p i {
+  margin-right: 0.5rem;
+}
+
+.shipDash-view-item-btn {
+  margin-top: auto;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shipDash-view-item-btn i {
+  margin-right: 0.5rem;
+}
+
+.shipDash-view-item-btn:hover {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Empty State */
+.shipDash-no-items {
+  text-align: center;
+  color: #64748b;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes itemFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shipDash-title {
+    font-size: 2rem;
+  }
+
+  .shipDash-activity-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .shipDash-hero-section {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .shipDash-actions-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Dashboard Stats Section */
+.shipDash-stats-section {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.shipDash-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.shipDash-stat-card {
+  flex: 1;
+  min-width: 240px;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.shipDash-stat-card:nth-child(1) {
+  background: linear-gradient(135deg, #dbeafe 0%, #475569 100%);
+}
+
+.shipDash-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #fee2e2 0%, #475569 100%);
+}
+
+.shipDash-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #dcfce7 0%, #475569 100%);
+}
+
+.shipDash-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.shipDash-stat-card::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+  transition: transform 0.5s ease;
+}
+
+.shipDash-stat-card:hover::before {
+  transform: scale(1.5);
+}
+
+.shipDash-stat-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.shipDash-stat-card p {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}

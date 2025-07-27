@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Auction Bidder Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bid-dashboard-container">
+        
+        <header class="bid-header">
+            <h1>Auction Bidder Dashboard</h1>
+            <div class="bid-bidder-info">Welcome, Bidder: <span id="bidder-name">Poornima</span></div>
+        </header>
+
+        
+        <div class="bid-main-content">
+            <!-- Image Carousel -->
+            <div class="bid-image-carousel">
+                <img id="auction-image" src="monalisa" alt="Auction Item">
+            </div>
+
+            <!-- Auction Details -->
+            <div class="bid-auction-details">
+                <h2>Current Auction: Vintage Watch</h2>
+                <p id="auction-desc">A rare vintage watch from 1960. Perfect condition.</p>
+                <p>Current Bid: <span id="current-bid">$250</span></p>
+                <p>Status: <span id="auction-status">Live</span></p>
+            </div>
+
+            <!-- Bidder Test/Info -->
+            <div class="bid-bidder-test">
+                <h3>Bidder Quick Check</h3>
+                <p>Are you ready to bid?</p>
+                <input type="checkbox" id="bid-confirm"> <label for="bid-confirm">Yes, I confirm</label>
+            </div>
+
+            <!--cclock and button -->
+            <div class="bid-bid-section">
+                <div class="bid-countdown">
+                    <h3>Time Remaining</h3>
+                    <div id="clock">00:00:00</div>
+                </div>
+                <button class="bid-bid-now-btn" id="bid-now" disabled>Bid Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

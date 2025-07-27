@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.usershipment-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.usershipment-title {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+.usershipment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.usershipment-item {
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  background-color: #f9fafb;
+  transition: 0.3s ease;
+}
+
+.usershipment-item:hover {
+  background-color: #f1f5f9;
+}
+
+.usershipment-info {
+  margin-bottom: 0.8rem;
+  color: #334155;
+}
+
+.usershipment-status {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.usershipment-details,
+.usershipment-courier {
+  color: #475569;
+  margin-bottom: 0.4rem;
+}
+
+.usershipment-details span,
+.usershipment-courier span {
+  color: #1e293b;
+  font-weight: 500;
+}

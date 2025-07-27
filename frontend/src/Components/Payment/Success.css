@@ -1,0 +1,49 @@
+.PaySuccessSuccessContainer {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    background-image: url("F:\Online_Auction_System\Online_Auction_system\frontend\public\BidImages\shipgold.jpg"); /* Example beach background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the container covers the full viewport height */
+    position: relative;
+  }
+  
+  .PaySuccessSuccessContainer h1 {
+    color: #021507;
+    margin-bottom: 20px;
+    background: rgba(240, 230, 85, 0.8);
+    padding: 10px;
+    border-radius: 25px;
+    width: fit-content; /* Alternative to inline-block */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .PaySuccessSuccessContainer p {
+    
+    color: #efe5e5;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background: rgba(145, 76, 76, 0.8); /* Semi-transparent background to ensure readability */
+    padding: 10px;
+    border-radius: 25px;
+    width: fit-content; /* Alternative to inline-block */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .PaySuccessBtnShipping {
+    padding: 10px 20px;
+    background-color: #84d7c0;
+    color: rgb(26, 5, 5);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .PaySuccessBtnShipping:hover {
+    background-color: #0069d9;
+  }

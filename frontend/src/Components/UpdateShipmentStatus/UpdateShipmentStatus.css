@@ -1,0 +1,168 @@
+/* UpdateShipmentStatus.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.updateShipment-container {
+  max-width: 1200px;
+  margin: 3rem auto 5rem;
+  padding: 2.5rem 3rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  font-family: 'Poppins', sans-serif;
+  color: #334155;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.updateShipment-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 2.2rem;
+  border-left: 6px solid #2563eb; /* a nice vibrant blue accent */
+  padding-left: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.updateShipment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.updateShipment-item {
+  background: #f9fafb;
+  border-radius: 18px;
+  padding: 1.8rem 2.4rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.updateShipment-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.updateShipment-info {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #1e293b;
+  flex: 1 1 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.updateShipment-status {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #64748b;
+  text-transform: capitalize;
+  margin-left: 0.6rem;
+  padding: 0.2rem 1rem;
+  border-radius: 24px;
+  background-color: #e0e7ff; /* soft blue bg */
+  box-shadow: inset 0 0 5px rgba(37, 99, 235, 0.2);
+  min-width: 110px;
+  text-align: center;
+  user-select: none;
+}
+
+.updateShipment-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  flex: 1 1 45%;
+  justify-content: flex-end;
+}
+
+.updateShipment-btn {
+  padding: 0.65rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 5px 15px rgba(30, 41, 59, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.updateShipment-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(30, 41, 59, 0.5);
+}
+
+/* Modern gradients for status buttons */
+.updateShipment-intransit-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.updateShipment-out-btn {
+  background: linear-gradient(135deg, #1b3477 0%, #17246e 100%);
+}
+
+.updateShipment-delivered-btn {
+  background: linear-gradient(135deg, #5525d8 0%, #1a2ea0 100%);
+}
+
+.updateShipment-delayed-btn {
+  background: linear-gradient(135deg, #161d79 0%, #401e8d 100%);
+}
+
+.updateShipment-returned-btn {
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+}
+
+.updateShipment-cancelled-btn {
+  background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .updateShipment-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .updateShipment-info {
+    flex: 1 1 100%;
+    font-size: 1.2rem;
+  }
+
+  .updateShipment-buttons {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    gap: 0.7rem;
+  }
+
+  .updateShipment-btn {
+    min-width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

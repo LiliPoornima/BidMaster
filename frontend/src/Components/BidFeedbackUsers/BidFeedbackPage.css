@@ -1,0 +1,430 @@
+/* BidFeedbackPage.css - Modern and User-Friendly Design */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-dark: #2c3e50;
+  --primary-medium: #34495e;
+  --primary-light: #4a6b8a;
+  --secondary-color: #3498db;
+  --secondary-dark: #2980b9;
+  --secondary-light: #5dade2;
+  --accent-color: #e74c3c;
+  --accent-dark: #c0392b;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --white: #ffffff;
+  --off-white: #f5f7fa;
+  --light-gray: #ecf0f1;
+  --medium-gray: #bdc3c7;
+  --dark-gray: #7f8c8d;
+  --text-dark: #2c3e50;
+  --text-medium: #7f8c8d;
+  --text-light: #bdc3c7;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 20px;
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--off-white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Main Container */
+.bidfeedback-page-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: var(--off-white);
+  background-image: 
+    linear-gradient(135deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}
+
+.bidfeedback-profile-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Page Header */
+.bidfeedback-profile-container h1 {
+  grid-column: 1 / -1;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.bidfeedback-profile-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-light));
+  border-radius: 2px;
+}
+
+/* Section Headers */
+.bidfeedback-list h2,
+.bidfeedback-form-container h2 {
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.bidfeedback-list h2::before {
+  content: '💬';
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.bidfeedback-form-container h2::before {
+  content: '✏️';
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Error Message */
+.bidfeedback-error-message {
+  grid-column: 1 / -1;
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+  padding: 15px;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 20px;
+  text-align: center;
+  border-left: 4px solid var(--danger-color);
+  font-weight: 500;
+}
+
+/* Feedback List Container */
+.bidfeedback-list {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+  max-height: 600px;
+  overflow-y: auto;
+  border-top: 5px solid var(--secondary-color);
+}
+
+.bidfeedback-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bidfeedback-list::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 10px;
+}
+
+.bidfeedback-list::-webkit-scrollbar-thumb {
+  background: var(--medium-gray);
+  border-radius: 10px;
+}
+
+.bidfeedback-list p {
+  color: var(--text-medium);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--off-white);
+  border-radius: var(--border-radius-md);
+}
+
+/* Feedback Items */
+.bidfeedback-item {
+  background: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 16px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: var(--transition);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bidfeedback-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.bidfeedback-item-content {
+  flex: 1;
+}
+
+.bidfeedback-item-content strong {
+  color: var(--primary-dark);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Rating Stars */
+.bidfeedback-rating {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.bidfeedback-star {
+  color: var(--warning-color);
+  margin-right: 3px;
+}
+
+.bidfeedback-rating-text {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* Feedback Text */
+.bidfeedback-text {
+  color: var(--text-dark);
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* Feedback Item Buttons */
+.bidfeedback-item-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.bidfeedback-btn-edit,
+.bidfeedback-btn-delete {
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+}
+
+.bidfeedback-btn-edit {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--secondary-dark);
+}
+
+.bidfeedback-btn-edit:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+}
+
+.bidfeedback-btn-delete {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--accent-dark);
+}
+
+.bidfeedback-btn-delete:hover {
+  background-color: rgba(231, 76, 60, 0.2);
+}
+
+/* Feedback Form Container */
+.bidfeedback-form-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+  border-top: 5px solid var(--secondary-color);
+}
+
+/* Form Groups */
+.bidfeedback-form-group {
+  margin-bottom: 20px;
+}
+
+.bidfeedback-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--primary-dark);
+}
+
+.bidfeedback-form-group input,
+.bidfeedback-form-group select,
+.bidfeedback-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius-md);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  color: var(--text-dark);
+}
+
+.bidfeedback-form-group input:focus,
+.bidfeedback-form-group select:focus,
+.bidfeedback-form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.bidfeedback-form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Star Rating Input */
+.bidfeedback-star-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bidfeedback-star-rating label {
+  margin-bottom: 0;
+}
+
+.bidfeedback-star-rating select {
+  flex: 1;
+}
+
+/* Button Group */
+.bidfeedback-button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.bidfeedback-btn-save,
+.bidfeedback-btn-cancel {
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bidfeedback-btn-save {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+  color: var(--white);
+  flex: 1;
+}
+
+.bidfeedback-btn-save:hover {
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, #1b5b89 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.bidfeedback-btn-cancel {
+  background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+  color: var(--white);
+}
+
+.bidfeedback-btn-cancel:hover {
+  background: linear-gradient(135deg, var(--dark-gray) 0%, #6a7778 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Loading State */
+.bidfeedback-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  position: relative;
+}
+
+.bidfeedback-loading::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--light-gray);
+  border-top-color: var(--secondary-color);
+  animation: spinner 1s linear infinite;
+  margin-left: 15px;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .bidfeedback-profile-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .bidfeedback-list {
+    order: 2;
+  }
+  
+  .bidfeedback-form-container {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .bidfeedback-page-wrapper {
+    padding: 20px 15px;
+  }
+  
+  .bidfeedback-profile-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .bidfeedback-list,
+  .bidfeedback-form-container {
+    padding: 20px;
+  }
+  
+  .bidfeedback-button-group {
+    flex-direction: column;
+  }
+  
+  .bidfeedback-btn-save,
+  .bidfeedback-btn-cancel {
+    width: 100%;
+  }
+}

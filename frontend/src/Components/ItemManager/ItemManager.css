@@ -1,0 +1,187 @@
+.item-manager-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.item-manager-content {
+  margin-top: 0px;
+}
+
+.item-manager-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background-color: #3f51b5;
+  color: white;
+  border-color: #3f51b5;
+}
+
+.add-item-btn-container {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.add-item-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.add-item-btn:hover {
+  background-color: #388e3c;
+}
+
+.items-table-container {
+  overflow-x: auto;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.items-table th,
+.items-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.items-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.items-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.item-image-cell {
+  width: 60px;
+}
+
+.item-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background-color: #ffecb3;
+  color: #ff8f00;
+}
+
+.status-badge.approved {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.rejected {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.actions-cell {
+  white-space: nowrap;
+}
+
+.action-btn {
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-btn {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.edit-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.delete-btn {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.approve-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.reject-btn {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.no-items {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.loading, .error {
+  text-align: center;
+  margin-top: 100px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-wrap: wrap;
+  }
+  
+      .actions-cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .action-btn {
+    margin-bottom: 5px;
+  }
+}

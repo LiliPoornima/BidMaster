@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ======= Shipment Dashboard Container ======= */
+.shipment-dashboard {
+  max-width: 1600px;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #334155;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-out;
+  min-height: 100vh;
+}
+
+/* ======= Title & Subtitle ======= */
+.shipment-dashboard h2,
+.shipment-subtitle {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.shipment-dashboard h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.shipment-subtitle {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #64748b;
+  margin-top: 3rem;
+}
+
+/* ======= Bidder Profile Input Cards ======= */
+.shipment-bidder-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shipment-bidder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shipment-bidder-card strong {
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+/* ======= Input Row ======= */
+.shipment-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.shipment-input-row input,
+.shipment-input-row select {
+  flex: 1 1 160px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #334155;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-shadow: inset 0 2px 5px rgb(0 0 0 / 0.05);
+  cursor: text;
+}
+
+.shipment-input-row input:focus,
+.shipment-input-row select:focus {
+  border-color: #1e293b;
+  box-shadow: 0 0 8px rgba(30, 41, 59, 0.3);
+}
+
+/* Custom arrow for selects */
+.shipment-input-row select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23343f58' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.5 5l6 6 6-6z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem 1rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* ======= Buttons ======= */
+.shipment-input-row button {
+  flex: 0 0 140px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(30, 41, 59, 0.4);
+  user-select: none;
+}
+
+.shipment-input-row button:hover {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.7);
+}
+
+/* ======= Shipment Table ======= */
+.shipment-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  font-size: 1rem;
+  color: #334155;
+  margin-top: 2rem;
+}
+
+.shipment-table thead th {
+  font-weight: 600;
+  color: #1e293b;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 2px solid #64748b;
+}
+
+.shipment-table tbody tr {
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.shipment-table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shipment-table tbody td {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+  border: none;
+  color: #334155;
+  font-weight: 500;
+  border-radius: 16px;
+}
+
+/* Inline Inputs & Selects in Table */
+.shipment-table input,
+.shipment-table select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #334155;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-shadow: inset 0 2px 5px rgb(0 0 0 / 0.05);
+  cursor: text;
+}
+
+.shipment-table input:focus,
+.shipment-table select:focus {
+  border-color: #1e293b;
+  box-shadow: 0 0 8px rgba(30, 41, 59, 0.3);
+}
+
+/* Custom arrow for selects inside table */
+.shipment-table select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23343f58' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.5 5l6 6 6-6z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem 1rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* ======= Action Buttons in Table ======= */
+.shipment-btn {
+  padding: 0.5rem 0.9rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 41, 59, 0.3);
+  user-select: none;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.7);
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.8);
+}
+
+.save-btn {
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.7);
+}
+
+.save-btn:hover {
+  background-color: #059669;
+  box-shadow: 0 15px 35px rgba(5, 150, 105, 0.8);
+}
+
+.cancel-btn {
+  background-color: #94a3b8;
+  color: white;
+  box-shadow: 0 10px 25px rgba(148, 163, 184, 0.7);
+}
+
+.cancel-btn:hover {
+  background-color: #64748b;
+  box-shadow: 0 15px 35px rgba(100, 116, 139, 0.8);
+}
+
+.shipment-delete-btn {
+  background-color: #ef4444;
+  color: white;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.7);
+}
+
+.shipment-delete-btn:hover {
+  background-color: #dc2626;
+  box-shadow: 0 15px 35px rgba(220, 38, 38, 0.8);
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 900px) {
+  .shipment-input-row {
+    flex-direction: column;
+  }
+
+  .shipment-input-row input,
+  .shipment-input-row select,
+  .shipment-input-row button {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .shipment-dashboard h2 {
+    font-size: 2rem;
+  }
+
+  .shipment-table thead th,
+  .shipment-table tbody td {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .shipment-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ======= Animations (same as shipDash) ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

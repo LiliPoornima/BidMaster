@@ -1,0 +1,706 @@
+/* Updated AboutUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.aboutus-container {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+ 
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
+}
+
+/* Hero Section */
+.aboutus-hero-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1684397808097-f23b735e47d3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+      center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.aboutus-hero-overlay {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  z-index: 1;
+  padding: 20px;
+}
+
+.aboutus-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 1s ease-out;
+}
+
+.aboutus-tagline {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Content Wrapper */
+.aboutus-content-wrapper {
+ width: 80%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Styling */
+.aboutus-section {
+  margin-bottom: 50px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.aboutus-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #3d4b64;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.aboutus-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+}
+
+.aboutus-section-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.aboutus-intro-section {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.aboutus-intro-section::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -15px;
+  width: 150px;
+  height: 150px;
+  background-image: url('F:\Online_Auction_System\Online_Auction_system\frontend\src\assets\logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Simplified Mission Section with single side image */
+.aboutus-mission-section {
+  padding: 30px 0;
+  position: relative;
+  margin: 50px 0;
+}
+
+.aboutus-mission-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.aboutus-mission-section .aboutus-section-text {
+  flex: 2;
+  margin-bottom: 0;
+}
+
+.aboutus-mission-image {
+  flex: 3;
+  height: 350px; /* Increased height */
+  background-image: url('https://casthomeloans.com/wp-content/uploads/2018/04/About-Us-1-1982x1024.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0; /* Rectangle corners instead of rounded */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.aboutus-mission-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(61, 75, 100, 0.1) 0%, rgba(44, 62, 80, 0.4) 100%);
+  z-index: 1;
+}
+
+/* Remove the animated mission images */
+.aboutus-mission-images,
+.mission-image-1,
+.mission-image-2 {
+  display: none;
+}
+
+/* Remove the after pseudo-element with animated image */
+.aboutus-mission-section::after {
+  display: none;
+}
+
+/* Journey Section with subtle background */
+.aboutus-journey-section {
+  padding: 30px 0;
+  position: relative;
+  margin: 40px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.aboutus-journey-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, rgba(61, 75, 100, 0.05), transparent);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* Enhanced Values Section */
+.aboutus-values-section {
+  padding: 50px 0;
+  margin: 60px -30px;
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.aboutus-values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.aboutus-values-section .aboutus-section-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+.aboutus-values-section .aboutus-section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  width: 100px;
+}
+
+.aboutus-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 60px;
+  padding: 0 80px;
+  position: relative;
+  z-index: 1;
+  
+
+ 
+}
+
+.aboutus-value-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+.aboutus-value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.aboutus-value-item:nth-child(1)::before {
+  background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=300&auto=format&fit=crop');
+}
+
+.aboutus-value-item:nth-child(2)::before {
+  background-image: url('https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=300&auto=format&fit=crop');
+}
+
+.aboutus-value-item:nth-child(3)::before {
+  background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=300&auto=format&fit=crop');
+}
+
+.aboutus-value-item:nth-child(4)::before {
+   background-image: url('https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=300&auto=format&fit=crop');
+}
+
+.aboutus-value-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.aboutus-value-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #3d4b64;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.aboutus-value-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+}
+
+.aboutus-value-item p {
+  color: #000000;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative elements for visual appeal */
+.aboutus-values-section::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 120px;
+  height: 120px;
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Stats Section with highlighted background and white text */
+.aboutus-stats-section {
+  padding: 50px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+  margin: 40px -30px 0;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.aboutus-stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='white' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 0;
+  border-radius: 0 0 12px 12px;
+}
+
+.aboutus-stats-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+  position: relative;
+  padding-bottom: 15px;
+  display: inline-block;
+  z-index: 1;
+}
+
+.aboutus-stats-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: white;
+}
+
+/* New team line layout */
+.aboutus-team-line {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 20px 30px;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutus-team-line .aboutus-stat-item {
+  flex: 0 0 auto;
+  width: 220px;
+  min-width: 220px;
+  height: 130px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.aboutus-team-line .aboutus-stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: white;
+  opacity: 0.7;
+}
+
+.aboutus-team-line .aboutus-stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.aboutus-team-line .aboutus-stat-item h2 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.aboutus-team-line .aboutus-stat-item p {
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Hide scrollbar but allow scrolling */
+.aboutus-team-line::-webkit-scrollbar {
+  display: none;
+}
+
+.aboutus-team-line {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Added floating icons animation */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(-5deg); }
+  50% { transform: translateY(-10px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(-5deg); }
+}
+
+.aboutus-content-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 10%;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.07;
+  animation: float 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+.aboutus-content-wrapper::after {
+  content: '© Auction System';
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .aboutus-title {
+    font-size: 2.5rem;
+  }
+  
+  .aboutus-tagline {
+    font-size: 1rem;
+  }
+  
+  .aboutus-hero-section {
+    height: 300px;
+  }
+  
+  .aboutus-content-wrapper {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .aboutus-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .aboutus-section-text {
+    font-size: 1rem;
+  }
+  
+  .aboutus-mission-content {
+    flex-direction: column;
+  }
+  
+  .aboutus-mission-image {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+  }
+  
+  .aboutus-values-section {
+    margin: 40px -20px;
+    padding: 40px 0;
+  }
+  
+  .aboutus-values-grid {
+    padding: 0 20px;
+  }
+  
+  .aboutus-team-line {
+    padding: 10px 5px 20px;
+    justify-content: flex-start;
+  }
+  
+  .aboutus-stats-section {
+    margin: 30px -20px 0;
+    padding: 40px 0 20px;
+  }
+}
+
+/* Team Stats Grid Layout */
+.aboutus-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 75px;
+  padding: 10px 30px 30px;
+  position: relative;
+  z-index: 1;
+  justify-items: center;
+  margin-left: 50px;
+}
+
+.aboutus-stats-grid .aboutus-stat-item {
+  width: 100%;
+  max-width: 220px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.aboutus-stats-grid .aboutus-stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: white;
+  opacity: 0.7;
+}
+
+.aboutus-stats-grid .aboutus-stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.aboutus-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  animation: pulseGlow 4s infinite alternate;
+}
+
+.aboutus-stat-item:hover .aboutus-profile {
+  transform: scale(1.05);
+  border-color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus-stat-item h2 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.aboutus-stat-item p {
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Preserving the team line layout in case you switch back */
+.aboutus-team-line {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 20px 30px;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutus-team-line .aboutus-stat-item {
+  flex: 0 0 auto;
+  width: 220px;
+  min-width: 220px;
+  height: 130px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+@media (max-width: 480px) {
+  .aboutus-title {
+    font-size: 2rem;
+  }
+  
+  .aboutus-hero-section {
+    height: 250px;
+  }
+  
+  .aboutus-values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aboutus-team-line .aboutus-stat-item {
+    min-width: 200px;
+  }
+  
+  .aboutus-stats-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,139 @@
+/* General container styling */
+.employee-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+}
+
+.employee-details-header {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+ 
+}
+
+.emp-go-back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: #e2e6ea;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.emp-go-back-button:hover {
+  background-color: #d6d8db;
+}
+
+.employee-details-header h2 {
+  text-align: center;
+  color: #343a40;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.employee-details {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.image-section img {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.image-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.image-section input[type="file"] {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+.image-section button[type="submit"] {
+  padding: 0.6rem;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.image-section button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.details-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.details-section h3 {
+  font-size: 1.5rem;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.details-section p {
+  font-size: 1rem;
+  color: #495057;
+  margin: 0.3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .employee-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section,
+  .details-section {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .image-section img {
+    width: 180px;
+    height: 180px;
+  }
+}

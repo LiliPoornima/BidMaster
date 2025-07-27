@@ -1,0 +1,82 @@
+/* General body styling for the terms page */
+.terms-page {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  /* Container for the content of terms */
+  .terms-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Title styling */
+  .terms-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraphs inside the terms container */
+  .terms-container p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  /* Add spacing between paragraphs for better readability */
+  .terms-container p + p {
+    margin-top: 15px;
+  }
+  
+  /* Back link */
+  .back-link {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* For the button or checkbox and label section */
+  .terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .terms-checkbox input {
+    margin-right: 10px;
+  }
+  
+  .terms-checkbox h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .terms-checkbox h4 a {
+    color: #007bff;
+  }
+  
+  .terms-checkbox h4 a:hover {
+    text-decoration: underline;
+  }
+  

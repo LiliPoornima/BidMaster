@@ -1,0 +1,118 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.courier-dashboard {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc;
+  margin-left: 60px;
+  min-height: 100vh;
+}
+
+.courier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.courier-header h2 {
+  color: #1e293b;
+}
+
+.courier-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.courier-input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.courier-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.courier-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.courier-add-btn {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: white;
+}
+
+.courier-add-btn:hover {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.courier-delete-btn {
+  background-color: #f87171;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.courier-delete-btn:hover {
+  background-color: #ef4444;
+}
+
+.courier-edit-btn {
+  background-color: #f0ad4e; /* Warning/Orange */
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.courier-edit-btn:hover {
+  background-color: #ec971f;
+}
+
+
+.courier-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.courier-table th,
+.courier-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.courier-table th {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.courier-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.courier-subtitle {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}

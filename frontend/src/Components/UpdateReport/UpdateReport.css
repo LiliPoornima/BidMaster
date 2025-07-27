@@ -1,0 +1,151 @@
+/* UpdateReport.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.UR-update-report-page {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233d4b64' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.UR-form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #3d4b64;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.UR-form-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #3d4b64, #6c7a96);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.UR-header-banner {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.UR-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Add Update Report Title */
+.UR-form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #3d4b64;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.UR-form-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #3d4b64, #6c7a96);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+/* Different color theme for update form */
+.UR-update-report-page .AR-submit-btn {
+  background: linear-gradient(135deg, #4a6fa5 0%, #166088 100%);
+}
+
+.UR-update-report-page .AR-submit-btn:hover {
+  background: linear-gradient(135deg, #166088 0%, #0d3b54 100%);
+}
+
+.UR-update-report-page .AR-form-group input:focus {
+  border-color: #4a6fa5;
+  box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.1);
+}
+
+.UR-update-report-page .AR-form-group:hover label {
+  color: #4a6fa5;
+}
+
+/* Responsive design specific to update page */
+@media (max-width: 768px) {
+  .UR-update-report-page .AR-content-container {
+    flex-direction: column;
+  }
+  
+  .UR-update-report-page .AR-image-container {
+    min-width: 100%;
+    min-height: 250px;
+  }
+}
+
+/* Animation for update form */
+.UR-update-report-page .AR-content-container {
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Improve input field appearance with filled data */
+.UR-update-report-page .AR-form-group input {
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.UR-update-report-page .AR-form-group input:focus {
+  background-color: #fff;
+}
+
+/* Add a subtle indication that this is an update form */
+.UR-update-report-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #4a6fa5, #166088);
+  z-index: 10;
+}
+
+/* Style for loading state */
+.UR-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 1.2rem;
+  color: #4a6fa5;
+}
+
+/* Error message styling */
+.UR-error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

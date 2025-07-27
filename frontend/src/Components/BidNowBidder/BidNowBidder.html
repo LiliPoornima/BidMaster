@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid Now</title>
+    <link rel="stylesheet" href="BidNowBidderStyles.css">
+</head>
+<body>
+    <header class="BidNowBidderHeader">
+        <h1>Bid Now - Vintage Watch</h1>
+        <p>Secure your chance to win!</p>
+    </header>
+    <main>
+        <section class="BidNowBidderBidSection">
+            <h2>Current Bid: <span id="BidNowBidderCurrentBid">$150</span></h2>
+            <input type="number" id="BidNowBidderBidInput" placeholder="Enter your bid" min="160" step="10">
+            <button onclick="placeBid()">Bid Now</button>
+            <p id="BidNowBidderConfirmation" style="display: none;">Success! Your bid was placed.</p>
+            <p id="BidNowBidderOutbidAlert" style="display: none;">You’ve been outbid! New bid: <span id="BidNowBidderNewBid"></span></p>
+            <button id="BidNowBidderRetractBtn" onclick="retractBid()" style="display: none;">Retract Bid (5 min left)</button>
+            <p>Time Left: <span id="BidNowBidderTimer">1d 3h 22m</span></p>
+            <a href="BidNowBidderItemDetails.html">View Item Details</a>
+        </section>
+    </main>
+    <footer class="BidNowBidderFooter">
+        <p>Support: bidhelp@example.com</p>
+    </footer>
+    <script src="BidNowBidderScript.js"></script>
+</body>
+</html>

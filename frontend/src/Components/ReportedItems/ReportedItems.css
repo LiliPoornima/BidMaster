@@ -1,0 +1,243 @@
+/* ReportedItems.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.RI-reported-items-page {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233d4b64' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.RI-header-banner {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.RI-header-overlay {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.RI-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.RI-content-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.RI-reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.RI-reports-table thead {
+  background-color: #3d4b64;
+  color: white;
+}
+
+.RI-reports-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff; /* Explicitly set to white for contrast */
+}
+
+.RI-reports-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e9ecef;
+  color: #000000; /* Changed to black */
+  font-weight: 500; /* Added slightly bolder font weight */
+}
+
+.RI-reports-table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.RI-reports-table tbody tr:hover {
+  background-color: #f0f0f0; /* Slightly darker for better contrast */
+}
+
+.RI-reports-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.RI-no-reports {
+  text-align: center;
+  padding: 50px 0;
+  color: #000000; /* Changed to black */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Buttons for download PDF */
+.RI-content-wrapper button {
+  background: linear-gradient(135deg, #3d4b64 0%, #2c3e50 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RI-content-wrapper button:hover {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.RI-content-wrapper button:active {
+  transform: translateY(1px);
+}
+
+.RI-content-wrapper button::before {
+  content: '📥';
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .RI-page-title {
+    font-size: 2rem;
+  }
+  
+  .RI-content-wrapper {
+    margin: 20px;
+    overflow-x: auto;
+  }
+  
+  .RI-reports-table {
+    min-width: 650px;
+  }
+  
+  .RI-reports-table th,
+  .RI-reports-table td {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* For the expanded table row details */
+.RI-expanded-row {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.RI-expanded-row td {
+  padding: 0;
+}
+
+.RI-expanded-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-top: 1px dashed #dee2e6;
+}
+
+.RI-expanded-content h3 {
+  margin-top: 0;
+  color: #3d4b64;
+}
+
+.RI-expanded-content p {
+  margin-bottom: 10px;
+  color: #000000; /* Changed to black */
+}
+
+/* For the table action buttons */
+.RI-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.RI-action-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 0;
+  padding: 5px;
+  box-shadow: none;
+}
+
+.RI-action-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.RI-edit-btn {
+  color: #3498db;
+}
+
+.RI-delete-btn {
+  color: #e74c3c;
+}
+
+.RI-view-btn {
+  color: #2ecc71;
+}
+
+/* For the ID column */
+.RI-report-id {
+  font-family: 'Courier New', monospace;
+  background-color: #f1f3f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #000000; /* Changed to black */
+}
+
+/* For the date column */
+.RI-report-date {
+  white-space: nowrap;
+  color: #000000; /* Changed to black */
+  font-weight: 500;
+}
+
+/* Add some subtle branding at the bottom */
+.RI-content-wrapper::after {
+  content: '© Auction System';
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #adb5bd;
+  font-size: 0.9rem;
+}

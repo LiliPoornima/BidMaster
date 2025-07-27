@@ -1,0 +1,409 @@
+/* BidShipProfile.css - Styled to match the existing theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #3b4d65;
+  --primary-light: #4e6484;
+  --primary-dark: #2c3a4e;
+  --accent-color: #4d8cf5;
+  --accent-hover: hsl(217, 79%, 57%);
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --warning-color: #f39c12;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+  --white: #ffffff;
+  --off-white: #f9fafb;
+  --light-gray: #ecf0f1;
+  --medium-gray: #bdc3c7;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 15px 35px rgba(0, 0, 0, 0.2);
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --transition-fast: all 0.2s ease;
+  --transition: all 0.3s ease;
+}
+
+.bidshipprofile-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bidshipprofile-background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/free-photo/luxury-auction-hammer-gavel-mahogany-wooden-block-dark-background-3d-rendering_107791-16630.jpg') center/cover no-repeat fixed;
+  z-index: -2;
+}
+
+.bidshipprofile-background-wrapper::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+.bidshipprofile-h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bidshipprofile-h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Progress steps styling */
+.bidshipprofile-progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto 40px;
+  max-width: 600px;
+  position: relative;
+}
+
+.bidshipprofile-progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--light-gray);
+  z-index: 1;
+}
+
+.bidshipprofile-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  text-align: center;
+}
+
+.bidshipprofile-step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--medium-gray);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bidshipprofile-step-label {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bidshipprofile-step.active .bidshipprofile-step-number {
+  background-color: var(--accent-color);
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(77, 140, 245, 0.3);
+}
+
+.bidshipprofile-step.active .bidshipprofile-step-label {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.bidshipprofile-step.completed .bidshipprofile-step-number {
+  background-color: var(--success-color);
+}
+
+.bidshipprofile-step.completed .bidshipprofile-step-label {
+  color: var(--success-color);
+}
+
+/* Form container styling */
+.bidshipprofile-form-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 40px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bidshipprofile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.bidshipprofile-form-group {
+  margin-bottom: 20px;
+}
+
+.bidshipprofile-form-group.full-width {
+  grid-column: span 2;
+}
+
+.bidshipprofile-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bidshipprofile-input, 
+.bidshipprofile-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius-md);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--off-white);
+  transition: var(--transition-fast);
+}
+
+.bidshipprofile-input:focus,
+.bidshipprofile-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(77, 140, 245, 0.2);
+  background-color: var(--white);
+}
+
+.bidshipprofile-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Tooltip styling */
+.bidshipprofile-tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--accent-color);
+}
+
+.bidshipprofile-tooltip-icon {
+  font-size: 0.9rem;
+  cursor: help;
+}
+
+.bidshipprofile-tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+  font-weight: 400;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+}
+
+.bidshipprofile-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--primary-dark) transparent transparent transparent;
+}
+
+.bidshipprofile-tooltip:hover .bidshipprofile-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Button styling */
+.bidshipprofile-button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.bidshipprofile-btn-save,
+.bidshipprofile-btn-cancel,
+.bidshipprofile-btn-previous {
+  padding: 12px 24px;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  transition: var(--transition);
+  min-width: 160px;
+  justify-content: center;
+}
+
+.bidshipprofile-btn-save {
+  background: linear-gradient(to right, var(--accent-color), #5d9bf6);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(77, 140, 245, 0.3);
+}
+
+.bidshipprofile-btn-save:hover {
+  background: linear-gradient(to right, #3a7ee8, #4d8cf5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(77, 140, 245, 0.4);
+}
+
+.bidshipprofile-btn-save:active {
+  transform: translateY(1px);
+}
+
+.bidshipprofile-btn-cancel {
+  background-color: var(--light-gray);
+  color: var(--text-color);
+}
+
+.bidshipprofile-btn-cancel:hover {
+  background-color: #dfe4ea;
+  transform: translateY(-2px);
+}
+
+.bidshipprofile-btn-previous {
+  background-color: var(--primary-light);
+  color: var(--white);
+}
+
+.bidshipprofile-btn-previous:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(59, 77, 101, 0.3);
+}
+
+/* Loading and error states */
+.bidshipprofile-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.bidshipprofile-error-message {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--error-color);
+  padding: 12px 20px;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+  40%, 60% { transform: translate3d(3px, 0, 0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .bidshipprofile-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bidshipprofile-form-group.full-width {
+    grid-column: span 1;
+  }
+  
+  .bidshipprofile-form-container {
+    padding: 25px;
+  }
+  
+  .bidshipprofile-h1 {
+    font-size: 2rem;
+  }
+  
+  .bidshipprofile-button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .bidshipprofile-btn-save,
+  .bidshipprofile-btn-cancel,
+  .bidshipprofile-btn-previous {
+    width: 100%;
+    min-width: 0;
+  }
+  
+  .bidshipprofile-progress-steps {
+    max-width: 90%;
+  }
+  
+  .bidshipprofile-step {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bidshipprofile-h1 {
+    font-size: 1.8rem;
+  }
+  
+  .bidshipprofile-h2 {
+    font-size: 1.3rem;
+  }
+  
+  .bidshipprofile-form-container {
+    padding: 20px 15px;
+  }
+  
+  .bidshipprofile-step-label {
+    font-size: 0.7rem;
+  }
+}

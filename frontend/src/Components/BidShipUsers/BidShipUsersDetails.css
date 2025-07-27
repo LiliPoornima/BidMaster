@@ -1,0 +1,501 @@
+/* BidShipUsersDetails.css - Modern and User-Friendly Design */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-dark: #2c3e50;
+  --primary-medium: #34495e;
+  --primary-light: #4a6b8a;
+  --secondary-color: #3498db;
+  --secondary-dark: #2980b9;
+  --secondary-light: #5dade2;
+  --accent-color: #e74c3c;
+  --accent-dark: #c0392b;
+  --accent-light: #ec7063;
+  --success-color: #2ecc71;
+  --success-dark: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --danger-dark: #c0392b;
+  --white: #ffffff;
+  --off-white: #f5f7fa;
+  --light-gray: #ecf0f1;
+  --medium-gray: #bdc3c7;
+  --dark-gray: #7f8c8d;
+  --text-dark: #2c3e50;
+  --text-medium: #7f8c8d;
+  --text-light: #bdc3c7;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 30px;
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--off-white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Main Container */
+.BidShipUserDetailsWrapper {
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  background-color: var(--off-white);
+  background-image: 
+    linear-gradient(135deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(52, 152, 219, 0.03) 25%, transparent 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}
+
+.BidShipUserDetailsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Page Title */
+.BidShipUserDetailsContainer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.BidShipUserDetailsContainer h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-light));
+  border-radius: 1px;
+}
+
+/* Error Message */
+.BidShipUserDetailsErrorMessage {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+  padding: 15px;
+  border-radius: var(--border-radius-md);
+  margin: 20px 0;
+  text-align: center;
+  border-left: 4px solid var(--danger-color);
+  font-weight: 500;
+}
+
+/* No Details Message */
+.BidShipUserDetailsNoDetails {
+  background-color: var(--light-gray);
+  padding: 30px;
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  margin: 30px 0;
+  color: var(--text-medium);
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Card Layout */
+.BidShipUserDetailsShipDetailsList {
+  margin: 20px 0;
+}
+
+.BidShipUserDetailsShipDetailCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.BidShipUserDetailsShipDetailCard {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border-top: 5px solid var(--secondary-color);
+  animation: fadeIn 0.5s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.BidShipUserDetailsShipDetailCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.BidShipUserDetailsShipDetailCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.BidShipUserDetailsShipDetailCard h3::before {
+  content: '👤';
+  font-size: 1.2rem;
+}
+
+.BidShipUserDetailsShipDetailCard p {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-medium);
+  transition: var(--transition);
+}
+
+.BidShipUserDetailsShipDetailCard p:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+  border-radius: var(--border-radius-sm);
+  padding-left: 5px;
+}
+
+.BidShipUserDetailsShipDetailCard p span {
+  font-weight: 600;
+  color: var(--text-dark);
+  min-width: 140px;
+}
+
+/* Card Actions */
+.BidShipUserDetailsCardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.BidShipUserDetailsBtnUpdate,
+.BidShipUserDetailsBtnDelete,
+.BidShipUserDetailsBtnAdd {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.BidShipUserDetailsBtnUpdate {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+  color: var(--white);
+}
+
+.BidShipUserDetailsBtnUpdate:hover {
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, #1b5b89 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.BidShipUserDetailsBtnDelete {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
+  color: var(--white);
+}
+
+.BidShipUserDetailsBtnDelete:hover {
+  background: linear-gradient(135deg, var(--accent-dark) 0%, #a82315 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.BidShipUserDetailsBtnAdd {
+  background: linear-gradient(135deg, var(--success-color) 0%, var(--success-dark) 100%);
+  color: var(--white);
+  padding: 12px 24px;
+  font-size: 1rem;
+  margin: 20px auto;
+  display: block;
+  max-width: 250px;
+  box-shadow: var(--shadow-sm);
+}
+
+.BidShipUserDetailsBtnAdd:hover {
+  background: linear-gradient(135deg, var(--success-dark) 0%, #1f9850 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Badges */
+.BidShipUserDetailsCountryBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--secondary-dark);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Card Flag Icons */
+.BidShipUserDetailsFlag {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+/* Loading State */
+.BidShipUserDetailsLoading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  position: relative;
+}
+
+.BidShipUserDetailsLoading::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--light-gray);
+  border-top-color: var(--secondary-color);
+  animation: spinner 1s linear infinite;
+  margin: 20px auto 0;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.BidShipUserDetailsEmptyState {
+  text-align: center;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: var(--shadow-md);
+}
+
+.BidShipUserDetailsEmptyState img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.BidShipUserDetailsEmptyState h3 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.BidShipUserDetailsEmptyState p {
+  color: var(--text-medium);
+  margin-bottom: 20px;
+}
+
+/* Info Cards */
+.BidShipUserDetailsInfoSection {
+  margin-bottom: 30px;
+}
+
+.BidShipUserDetailsInfoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.BidShipUserDetailsInfoCard {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.BidShipUserDetailsInfoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.BidShipUserDetailsInfoIcon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.BidShipUserDetailsInfoTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.BidShipUserDetailsInfoValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+/* Search and Filter Bar */
+.BidShipUserDetailsFilterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  align-items: center;
+}
+
+.BidShipUserDetailsSearch {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.BidShipUserDetailsSearch input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius-md);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.BidShipUserDetailsSearch input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.BidShipUserDetailsSearch svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-medium);
+}
+
+.BidShipUserDetailsFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.BidShipUserDetailsFilter select {
+  padding: 10px 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius-md);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.BidShipUserDetailsFilter select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.BidShipUserDetailsFilter label {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+/* Card Details List */
+.BidShipUserDetailsCardDetails {
+  max-height: 220px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 5px;
+}
+
+.BidShipUserDetailsCardDetails::-webkit-scrollbar {
+  width: 5px;
+}
+
+.BidShipUserDetailsCardDetails::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 10px;
+}
+
+.BidShipUserDetailsCardDetails::-webkit-scrollbar-thumb {
+  background: var(--medium-gray);
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .BidShipUserDetailsContainer {
+    padding: 15px;
+  }
+  
+  .BidShipUserDetailsContainer h1 {
+    font-size: 1.8rem;
+  }
+  
+  .BidShipUserDetailsCardActions {
+    flex-direction: column;
+  }
+  
+  .BidShipUserDetailsBtnUpdate,
+  .BidShipUserDetailsBtnDelete {
+    width: 100%;
+  }
+  
+  .BidShipUserDetailsFilterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .BidShipUserDetailsShipDetailCards {
+    grid-template-columns: 1fr;
+  }
+  
+  .BidShipUserDetailsContainer h1 {
+    font-size: 1.5rem;
+  }
+}

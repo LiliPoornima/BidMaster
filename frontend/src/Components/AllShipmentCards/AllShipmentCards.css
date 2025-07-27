@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-dark: #2c3e50;
+  --primary-medium: #34495e;
+  --primary-light: #4a6b8a;
+  --secondary-color: #3498db;
+  --secondary-dark: #2980b9;
+  --secondary-light: #5dade2;
+  --accent-color: #e74c3c;
+  --accent-dark: #c0392b;
+  --success-color: #2ecc71;
+  --success-dark: #27ae60;
+  --light-gray: #ecf0f1;
+  --medium-gray: #bdc3c7;
+  --white: #ffffff;
+  --off-white: #f5f7fa;
+  --text-dark: #2c3e50;
+  --text-medium: #7f8c8d;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+  --border-radius-md: 12px;
+  --border-radius-sm: 6px;
+}
+
+/* Page Wrapper */
+.all-shipment-card-wrapper {
+  padding: 30px;
+  background-color: var(--off-white);
+  min-height: 100vh;
+}
+
+.all-shipment-card-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Title */
+.all-shipment-card-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.all-shipment-card-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-light));
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Grid for Cards */
+.all-shipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 40px;
+}
+
+/* Card Style */
+.shipment-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 25px 30px;
+  position: relative;
+  border-left: 6px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.4s ease-out forwards;
+  transition: var(--transition);
+}
+
+.shipment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Status Badge */
+.shipment-status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--secondary-light);
+  color: var(--white);
+  padding: 5px 14px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Title inside Card */
+.shipment-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Info Fields */
+.shipment-card-details p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  margin-bottom: 6px;
+}
+
+.shipment-card-details p span {
+  font-weight: 600;
+  color: var(--text-dark);
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Highlight for Cost */
+.shipment-card-cost {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--success-dark);
+}
+
+/* Action Buttons */
+.shipment-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.shipment-btn-update,
+.shipment-btn-delete {
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shipment-btn-update {
+  background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+  color: var(--white);
+}
+
+.shipment-btn-update:hover {
+  background: linear-gradient(135deg, var(--secondary-dark), #1a5276);
+}
+
+.shipment-btn-delete {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+  color: var(--white);
+}
+
+.shipment-btn-delete:hover {
+  background: linear-gradient(135deg, var(--accent-dark), #a93226);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .all-shipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shipment-card-details p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shipment-card-details p span {
+    margin-bottom: 4px;
+  }
+
+  .shipment-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shipment-btn-update,
+  .shipment-btn-delete {
+    width: 100%;
+  }
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
