@@ -223,11 +223,6 @@ npm run build
 4. Set up SSL certificates
 5. Configure reverse proxy (nginx/apache)
 
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
 ## 🆘 Support
 
 For support, please contact the development team or create an issue in the repository.
